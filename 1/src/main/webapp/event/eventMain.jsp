@@ -18,6 +18,7 @@
 .green-background {
 	background-color: #84c0a0;
 }
+
 </style>
 </head>
 <body>
@@ -90,7 +91,7 @@
 					<div class="col-lg-3 col-sm-6">
 						<div class="waiting-item">
 							<a href="<%=notWithFormTag%>evDetail&eno=${bean.eno}">
-								<img src="<%=appName%>/assets/img/event/${bean.eimage1 } " alt="">
+								<img src="<%=appName%>/assets/img/event_img/${bean.eimage1 } " alt="">
 							</a>
 							<div class="down-content">
 								<h4>${bean.ename }</h4>

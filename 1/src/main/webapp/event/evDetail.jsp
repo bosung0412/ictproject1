@@ -23,9 +23,9 @@
      <section class="u-clearfix u-section-1" id="sec-d4a9">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-custom-color-4 u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-expanded-width-xs u-shape u-shape-rectangle u-shape-1"></div>
-        <img src="<%=appName%>/assets/img/event/morae.png" alt="" class="u-image u-image-contain u-image-default u-image-1" data-image-width="500" data-image-height="396">
-        <img src="<%=appName%>/assets/img/event/snoopy01.png" alt="" class="u-image u-image-default u-image-2" data-image-width="400" data-image-height="400">
-        <img src="<%=appName%>/assets/img/event/eventlogo.png" alt="" class="u-image u-image-contain u-image-default u-image-3" data-image-width="120" data-image-height="120">
+        <img src="<%=appName%>/assets/img/event_img/morae.png" alt="" class="u-image u-image-contain u-image-default u-image-1" data-image-width="500" data-image-height="396">
+        <img src="<%=appName%>/assets/img/event_img/snoopy01.png" alt="" class="u-image u-image-default u-image-2" data-image-width="400" data-image-height="400">
+        <img src="<%=appName%>/assets/img/event_img/eventlogo.png" alt="" class="u-image u-image-contain u-image-default u-image-3" data-image-width="120" data-image-height="120">
         <div class="u-container-style u-expanded-width-xs u-group u-group-1">
           <div class="u-container-layout u-valign-top-lg u-container-layout-1">
             <h1 class="u-text u-text-custom-color-13 u-title u-text-1">

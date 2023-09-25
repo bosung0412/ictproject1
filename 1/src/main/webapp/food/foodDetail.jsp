@@ -130,11 +130,11 @@
 				<div class="contents" >
 					<span class="sub-title"><strong>작성자: </strong></span>
 					<img class="" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbcdHQb%2FbtsuG4zaJd7%2F9MkJVs5zrmwJYsBcTMSJJ0%2Fimg.png" height="25px;" width="25px;">
-					<span class="">park123</span>
+					<span class="">${requestScope.bean.id}</span>
 				</div>
 				<div class="">
 					<span class="sub-title"><strong>작성일자: </strong></span>
-					<span class="">2023.09.19</span>
+					<span class="">${requestScope.bean.regdate}</span>
 				</div>
 			</div>
 			<!-- 작성자와 장성일자 -->
@@ -142,27 +142,27 @@
 		</div>
 		<div class="mainBox container my-5 py-5 wow fadeInUp" data-wow-delay="0.3s">
 			<div class="col-sm-5">
-				<img class="mainimage" src="<%=appName%>/assets/img/beerbanner.png">
+				<img class="mainimage" src="<%=appName%>/upload/${requestScope.bean.image1}">
 			</div>
 			<div class="content col-sm-7">
 				<div class="title">
-					<span class="title text-primary">미영이네 식당</span>
+					<span class="title text-primary">${requestScope.bean.title}</span>
 				</div>
 				<div class="contents">
 					<span class="sub-title"><strong>주소: </strong></span> 
-					<span class="">제주특별자치도 서귀포</span>
+					<span class="">${requestScope.bean.place}</span>
 				</div>
 				<div class="contents">
 					<span class="sub-title"><strong>영업시간: </strong></span> 
-					<span class="">11:20 ~ 22:00</span>
+					<span class="">${requestScope.bean.time}</span>
 				</div>
 				<div class="contents">
 					<span class="sub-title"><strong>브레이크타임: </strong></span> 
-					<span class="">15:00 ~ 17:00</span>
+					<span class="">${requestScope.bean.breaktime}</span>
 				</div>
 				<div class="contents">
 					<span class="sub-title"><strong>연락처: </strong></span> 
-					<span class="">064-774-2342</span>
+					<span class="">${requestScope.bean.phoneno}</span>
 				</div>
 				<div class="menubox wow fadeInUp" data-wow-delay="0.4s">
 					<div class="menubox-sub col-sm-3">
@@ -198,16 +198,16 @@
 		<div class="container my-5 py-5 py-5 wow fadeInUp" data-wow-delay="0.6s">
 			<div class="row align-items-center g-5">
 				<div class="col-sm-3">
-					<img alt="" src="<%=appName%>/assets/img/beerbanner.png">
+					<img alt="" src="<%=appName%>/upload/${requestScope.bean.image2}">
 				</div>
 				<div class="col-sm-3">
-					<img alt="" src="<%=appName%>/assets/img/bg-hero.jpg">
+					<img alt="" src="<%=appName%>/upload/${requestScope.bean.image3}">
 				</div>
 				<div class="col-sm-3">
-					<img alt="" src="<%=appName%>/assets/img/beerbanner.png">
+					<img alt="" src="<%=appName%>/upload/${requestScope.bean.image4}">
 				</div>
 				<div class="col-sm-3">
-					<img alt="" src="<%=appName%>/assets/img/cafebanner.png">
+					<img alt="" src="<%=appName%>/upload/${requestScope.bean.image5}">
 				</div>
 			</div>
 		</div>
