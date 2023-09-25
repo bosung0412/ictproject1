@@ -1,5 +1,6 @@
 # 구현해야 할 목록들입니다.
 home=com.jeju.controller.HomeController
+
 # member section
 meLogin=com.jeju.controller.member.MemberLoginController
 #meLogout=com.jeju.controller.member.MemberLogoutController
@@ -7,6 +8,7 @@ meInsert=com.jeju.controller.member.MemberInsertController
 #meList=com.jeju.controller.member.MemberListController
 #meDetail=com.jeju.controller.member.MemberDetailController
 meMenu=com.jeju.controller.member.MemberMenuController
+
 # food section
 fdMain=com.jeju.controller.food.FoodMainController
 #boInsert=com.jeju.controller.board.BoardInsertController
@@ -31,10 +33,8 @@ evMain=com.jeju.controller.event.EventMainController
 #cmDelete=com.jeju.controller.comment.CommentDeleteController
 
 # free board section
-frMain=com.jeju.controller.freeboard.FreeboardMainController
-#maUpdate=com.jeju.controller.mall.MallUpdateController
-#maDelete=com.jeju.controller.mall.MallDeleteController
-#maList=com.jeju.controller.mall.MallListController
-#maDetail=com.jeju.controller.mall.MallDetailController
-#maHistory=com.jeju.controller.mall.MallHistoryController
-#maCalculate=com.jeju.controller.mall.MallCalculateController
+frMain=com.jeju.controller.free.freeBoardMainController
+frDetail=com.jeju.controller.free.freeBoardDetailController
+frInsert=com.jeju.controller.free.freeInsertController
+frUpdate=com.jeju.controller.free.freeUpdateController
+frEmoticon=com.jeju.controller.free.freeEmoticonController
