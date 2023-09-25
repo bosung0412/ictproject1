@@ -11,17 +11,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 게시판 메인 전용 부트스트랩 -->
 <link rel="stylesheet" href="<%=appName%>/assets/css_boardmain/bootstrap.min.css">
-
+<link href="<%=appName%>/assets/css_boardmain/style.css" rel="stylesheet">
 <!-- 게시판 메인 전용 style.css -->
-<link href="<%=appName%>/assets/css_eventmain/evenstmain.css" rel="stylesheet">
-
+<link href="<%=appName%>/assets/css_eventmain/eventmain.css" rel="stylesheet">
 <style type="text/css">
+.green-background {
+	background-color: #84c0a0;
+}
 </style>
 </head>
 <body>
 
 	<!-- 헤더 Start -->
-	<div class="container-xxl py-5 bg-dark event-header mb-5 " style="background-image:url('<%=appName%>/assets/img/bg_event.jpg');  ">
+	<div class="container-xxl py-5 bg-dark event-header mb-5 ">
 		<div class="container my-5 py-5">
 			<div class="row align-items-center g-5">
 				<div class="col-lg-6 text-center text-lg-start">
@@ -49,8 +51,8 @@
 								<option value="category">작성자
 							</select>
 							<input class="form-control-sm" type="text" name="keyword" id="keyword" placeholder="키워드 입력">
-							<button type="submit" class="btn btn-warning form-control-sm" onclick="">검색</button>
-							<button type="button" class="btn btn-warning form-control-sm" onclick="searchAll();">전체 검색</button>
+							<button type="submit" class="btn green-background form-control-sm" onclick="">검색</button>
+							<button type="button" class="btn green-background form-control-sm" onclick="searchAll();">전체 검색</button>
 							<button type="button" class="btn btn-secondary form-control-sm" onclick="writeForm();">글 쓰기</button>
 						</div>
 				</form>
@@ -61,7 +63,7 @@
 	<div class="container-xxl pt-5">
 		<ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
 			<li class="nav-item"><a class="category d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
-					<i class="fa far fas fa-calendar-day fa-2x text-primary"></i>
+					<i class="fa far fas fa-calendar-day fa-2x text-primary" style="color: #ff9600;"></i>
 					<div class="ps-3">
 						<h2 class="category-text">전체</h2>
 					</div>
@@ -84,52 +86,27 @@
 	<section class="contest-waiting">
 		<div class="container-xxl">
 			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="waiting-item">
-						<img src="<%=appName%>/assets/img/minsokchon01.png" alt="">
-						<div class="down-content">
-							<h4>제주민속촌 귀몽</h4>
-							<p>2023.07.01 ~ 2023.11.05</p>
-						<!-- 	<ul class="info">
+				<c:forEach var="bean" items="${requestScope.eventList }">
+					<div class="col-lg-3 col-sm-6">
+						<div class="waiting-item">
+							<a href="<%=notWithFormTag%>evDetail&eno=${bean.eno}">
+								<img src="<%=appName%>/assets/img/event/${bean.eimage1 } " alt="">
+							</a>
+							<div class="down-content">
+								<h4>${bean.ename }</h4>
+								<p>${bean.eduration }</p>
+								<!-- 	<ul class="info">
 								<li><i class="fa fas fa-phone-square fa-2x text-primary" style="text-align: center;"></i> 064-1234-1234</li>
 							</ul> -->
-							<span class="price"><i class="fa fas fa-phone-square fa-2x text-primary" style="text-align: center;"></i> <em>064-1234-1234</em></span> 
-							<br/>
-						<!-- 	<span class="deadline">Deadline: <em>4 Days</em></span> -->
+								<span class="price"><i class="fa fas fa-phone-square fa-2x text-primary" style="text-align: center;"></i> <em>${bean.ephoneno}</em></span>
+								<br />
+								<!-- 	<span class="deadline">Deadline: <em>4 Days</em></span> -->
 
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="waiting-item">
-						<img src="<%=appName%>/assets/img/minsokchon01.png" alt="">
-						<div class="down-content">
-							<h4>Nature Walk in the Forest</h4>
-							<p>Lorem ipsum dolor siter and ametters conseietur adipiscing elit.</p>
-							<span class="price">Price: <em>$1,400</em></span> <span class="deadline">Deadline: <em>2 Days</em></span>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="waiting-item">
-						<img src="<%=appName%>/assets/img/minsokchon01.png" alt="">
-						<div class="down-content">
-							<h4>The Road to Photograph</h4>
-							<p>Lorem ipsum dolor siter and ametters conseietur adipiscing elit.</p>
-							<span class="price">Price: <em>$1,250</em></span> <span class="deadline">Deadline: <em>4 Days</em></span>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="waiting-item">
-						<img src="<%=appName%>/assets/img/minsokchon01.png" alt="">
-						<div class="down-content">
-							<h4>The Lake and Mountain Scenery</h4>
-							<p>Lorem ipsum dolor siter and ametters conseietur adipiscing elit.</p>
-							<span class="price">Price: <em>$1,600</em></span> <span class="deadline">Deadline: <em>10 Days</em></span>
-						</div>
-					</div>
-				</div>
+				</c:forEach>
+				<!-- 페이지 start -->
 				<div class="col-lg-12">
 					<ul class="pagination">
 						<li><a href="#">
@@ -143,10 +120,11 @@
 							</a></li>
 					</ul>
 				</div>
+				<!-- 페이지 end -->
 			</div>
 		</div>
 	</section>
-	<!-- 게시물 목록 End -->
+
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
